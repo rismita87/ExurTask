@@ -1,5 +1,6 @@
+//Product container containes search filter input,
+//search filter checkboxes and product overview
 import { Loader, Grid } from "@mantine/core";
-
 import { useState, useEffect } from "react";
 import ProductFilter from "./ProductFilter";
 import ProductOverview from "./ProductOverview";
@@ -20,6 +21,10 @@ export default function ProductContainer() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(null);
   const [searchFilterText, setSearchFilterText] = useState<string>("");
+
+  //here we have initialized with a static JSON object,
+  //but to make it generic we need to call the API an dget
+  //distinct compliance type from it to create the compliance type checkbox
   const [checkboxSelectionArray, setCheckboxSelectionArray] =
     useState<checkboxSelectionArrayType>({
       checkboxSelection: [

@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+//Header component is added just as a place holder.
+// For actual implementation Logo and detailed
+//navigations are needed to be added.
+import { useState } from "react";
 import {
   createStyles,
   Header,

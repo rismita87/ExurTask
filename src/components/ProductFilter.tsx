@@ -1,3 +1,5 @@
+//Product filter contains search input and
+//the search is automatically submitted out after each kyestroke.
 import { TextInput } from "@mantine/core";
 
 export default function ProductFilter({ filterProductArrayAction }: any) {

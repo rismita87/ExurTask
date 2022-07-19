@@ -1,4 +1,6 @@
-import { Card, Image, Text, SimpleGrid, Grid } from "@mantine/core";
+//Product overview initially renders all products.
+//Then after, loads product cards based on filtering inputs given by user.
+import { Card, Image, Text, SimpleGrid } from "@mantine/core";
 interface ProdList {
   results: { id: number; name: string }[];
 }
@@ -6,7 +8,7 @@ interface ProdList {
 export default function ProductOverview({ results }: ProdList) {
   if (results.length > 0) {
     const productItems = results.map((product) => (
-      <div>
+      <div key={product.id}>
         <Card shadow="sm" p="sm" component="a" target="_blank">
           <Card.Section>
             <Image

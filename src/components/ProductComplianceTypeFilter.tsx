@@ -1,3 +1,6 @@
+//Product compliance filter containes check filter which reflects
+//the changes on product overview on real time based on compliance type id.
+//While checking a filter on/off, the changes are reflected immediately.
 import { Checkbox, InputWrapper } from "@mantine/core";
 
 export default function ProductComplianceTypeFilter({
